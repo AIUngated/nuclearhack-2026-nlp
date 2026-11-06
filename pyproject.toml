@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vacv-selectivity"
+version = "0.1.0"
+description = "Reproducible SMILES-only selectivity regression for Nuclear IT Hack 2026"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy==2.3.5", "pandas==2.2.3", "scipy==1.17.0",
+  "scikit-learn==1.8.0", "joblib==1.5.3", "rdkit==2026.9.1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+app = ["streamlit==1.67.0"]
+reports = ["matplotlib==3.10.8"]
+
+[project.scripts]
+vacv = "vacv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
