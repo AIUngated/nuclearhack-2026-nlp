@@ -67,5 +67,19 @@
     "Meaning of SI=10000 and zero labels remains unresolved.",
     "Similarity is not calibrated confidence.",
     "Remote publication should be checked after changes."
-  ]
+  ],
+  "external_audit": {
+    "audited_commit": "4f48d61995a211f779300eb96d920c9e9cdac28a",
+    "platform": "Linux",
+    "status": "reported_success",
+    "reported_by": "project owner",
+    "tests_passed": 56,
+    "prediction_rows": 597,
+    "max_absolute_prediction_difference": 3.64e-12,
+    "metrics_reproduced": true,
+    "raw_logs_and_environment_not_supplied": true,
+    "report": "reports/external_audits/linux_4f48d61.json"
+  },
+  "native_linux_final_run_scope": "Own checks only; external Linux audit is recorded separately.",
+  "external_audit_scope": "Published commit 4f48d61; local submission documentation is prepared after this audit."
 }

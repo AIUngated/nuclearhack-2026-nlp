@@ -16,5 +16,8 @@ kaggle.json
 /reports/*
 !/reports/verification_summary.json
 !/reports/requirements-windows-lock.txt
+!/reports/external_audits/
+/reports/external_audits/*
+!/reports/external_audits/linux_4f48d61.json
 docs/sources/*.docx
 docs/sources/*.pdf

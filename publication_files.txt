@@ -5,6 +5,8 @@ app/streamlit_app.py
 configs/baseline.json
 docs/clean_clone.md
 docs/curation_note.md
+docs/demo_quickstart.md
+docs/final_submission.md
 docs/implementation_plan.md
 docs/requirements.md
 docs/sources/competition_page_excerpt.md
@@ -12,6 +14,7 @@ docs/windows_runbook.md
 presentation/defense_outline.md
 publication_files.txt
 pyproject.toml
+reports/external_audits/linux_4f48d61.json
 reports/requirements-windows-lock.txt
 reports/verification_summary.json
 requirements-app.txt

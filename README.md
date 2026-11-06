@@ -40,7 +40,9 @@ py -3.12 -m venv .venv
 
 Linux/macOS используют те же Python-команды после создания окружения и активации
 `source .venv/bin/activate`. Финальный набор проверен на Windows / Python 3.12.10;
-отдельный native Linux-прогон текущей версии не выполнялся.
+собственный native Linux-прогон текущей версии не выполнялся.
+Внешнее воспроизведение коммита 4f48d61 на Linux, переданное владельцем проекта,
+зафиксировано отдельно: [внешний аудит](reports/external_audits/linux_4f48d61.json).
 
 Train сохраняет artifacts/baseline/model.joblib; predict создаёт artifacts/submission.csv.
 В существующей рабочей папке используйте отдельный output для повторного обучения.
@@ -104,6 +106,8 @@ Tanimoto описывает химическое сходство с train, а �
 - [Статус курации](docs/curation_note.md)
 - [План проекта](docs/implementation_plan.md)
 - [Структура защиты](presentation/defense_outline.md)
+- [Локальный комплект для сдачи](docs/final_submission.md)
+- [Краткий запуск демо](docs/demo_quickstart.md)
 
 Публикуемый состав исходников задан в publication_files.txt. Исходные данные, модели и контрольный
 пакет сохраняются отдельно; секреты и приватные документы в репозиторий не входят.
