@@ -1,113 +1,68 @@
-# NLP · VACV Selectivity Prediction
+# CatBoost 75/25 — Kaggle MSE 830 000 по сообщению пользователя
 
-Проект команды NLP для Nuclear IT Hack 2026, НИЯУ МИФИ: прогноз **SI VACV по SMILES**.
-Задача регрессии, официальная метрика — **MSE в исходной шкале SI**.
+Готовый проект именно для варианта `submission_l2_50_blend25.csv`. В этой поставке `submission.csv` — его точная копия, а предсказание по умолчанию использует тот же ансамбль. Обученные веса не изменялись и не переобучались при упаковке.
 
-## Метод
+## Состав решения
 
-RDKit: FragmentParent → Uncharger → Morgan radius=2, 2048 bits с учётом стереохимии и 16 дескрипторов.
-Основная модель — Random Forest, 300 деревьев, seed=42, CPU, n_jobs=2.
+```python
+SI_pred = 0.75 * CatBoost_L2_20_pred + 0.25 * CatBoost_L2_50_pred
+```
 
-В признаки поступает только SMILES. CC50_uM, IC50_uM_VACV, их пропуски и отношение,
-Title, Culture, strain, index и числа из sample-submit исключены.
-Index используется для выравнивания выходного CSV.
+Оба компонента: CatBoost, Tweedie variance_power=1.35, 1000 итераций, learning_rate=0.03, depth=5, random_seed=42. Отличие — `l2_leaf_reg`: 20 и 50. Признаки: 4096 счётчиков Morgan radius=3 с учётом хиральности и 217 RDKit-дескрипторов. Используется только SMILES; `index` нужен для сопоставления строк. Усреднение выполняется в исходной шкале SI.
 
-## Данные
-
-Train содержит 320 строк, test — 597. После стандартизации train содержит 311 parent-групп
-и 165 Murcko scaffolds. Данные приватного соревнования, модели и контрольные артефакты
-распространяются отдельно от исходников.
-
-Получите разрешённые train.csv, test.csv и sample_submit.csv и поместите их в data/raw/.
-Метки SI=10000 (81 строка) и нулевые метки (2 строки) сохраняются без изменений до разъяснения организаторов.
+Тренировочная цель каждого компонента: `min(SI, 20000) / 1000`. Прогноз CatBoost с `prediction_type='Exponent'` умножается на 1000. Значения предсказаний ограничиваются снизу 0,01; фиксированного верхнего ограничения нет. Ограничение 20 000 относится только к тренировочным целям, а не к окончательному CSV. Проверочные истинные SI не обрезаются.
 
 ## Установка и запуск
 
-Рекомендован Python 3.12. Следующие команды предназначены для новой папки с кодом.
+Проверено на Python 3.12, CPU. После распаковки перейдите в папку `catboost_75_25_830000`:
 
-Windows PowerShell:
-
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --timeout 120 --retries 6 -r requirements-app.txt -r requirements-reports.txt
-.\.venv\Scripts\python.exe -m pip install -e . --no-deps
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\python.exe scripts/run.py train
-.\.venv\Scripts\python.exe scripts/run.py predict
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m streamlit run app/streamlit_app.py --browser.gatherUsageStats=false
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python pipeline.py predict --test data/test.csv --template data/sample_submit.csv --output predictions.csv
 ```
 
-Linux/macOS используют те же Python-команды после создания окружения и активации
-`source .venv/bin/activate`. Финальный набор проверен на Windows / Python 3.12.10;
-собственный native Linux-прогон текущей версии не выполнялся.
-Внешнее воспроизведение коммита 4f48d61 на Linux, переданное владельцем проекта,
-зафиксировано отдельно: [внешний аудит](reports/external_audits/linux_4f48d61.json).
+Дополнительное обучение не требуется. `--model` по умолчанию равен `selected`, который здесь зафиксирован как `l2_50_blend25`. Можно указать его явно:
 
-Train сохраняет artifacts/baseline/model.joblib; predict создаёт artifacts/submission.csv.
-В существующей рабочей папке используйте отдельный output для повторного обучения.
-
-## Воспроизводимость и валидация
-
-Пять compound folds удерживают parent-структуры, соли и стереоварианты в одной группе.
-Отдельные scaffold folds удерживают каждый Murcko scaffold целиком.
-Все обучаемые преобразования fit выполняются внутри тренировочной части fold.
-
-Для рабочей папки с доверенным контрольным пакетом:
-
-```powershell
-.\.venv\Scripts\python.exe scripts/run.py reproduce --output artifacts/reproduced
-.\.venv\Scripts\python.exe scripts/check_reproduction.py artifacts/submission.csv artifacts/reproduced/submission.csv
-.\.venv\Scripts\python.exe scripts/verify_delivery.py
+```bash
+python pipeline.py predict --model l2_50_blend25 --output predictions.csv
 ```
 
-Проверяющий скрипт сверяет конфигурацию, OOF/folds, обе сохранённые модели и фактическую модель демо,
-вход только по SMILES, schema CSV, порядок index и контрольные суммы.
-Для него нужны доверенные контрольные артефакты и сохранённые snapshots; один Git-клон их не содержит.
-Пустые CSV, NaN/Inf, отрицательные прогнозы и повторные index отклоняются.
+Для своих данных передайте CSV с уникальными `index` и валидными `SMILES`; шаблон submission необязателен. Некорректные SMILES вызывают ошибку, строки не удаляются молча. Два готовых файла `submission.csv` и `submission_l2_50_blend25.csv` совпадают побайтно, содержат 597 строк и столбцы `index,SI VACV`.
 
-| Локальная CV RF, seed=42 | Raw MSE |
-|---|---:|
-| compound, 5 folds | 14 573 172,262681 |
-| scaffold, 5 folds | 20 682 986,252401 |
+## Проверка без обучения
 
-На исходном scaffold split Tanimoto Kernel Ridge: MSE 19 055 199,440157.
-Модель выбиралась по compound CV. Выбор и оценка используют одну CV, поэтому это не независимая оценка.
-Реальный Kaggle score пока не зафиксирован. Сводка проверок: [reports/verification_summary.json](reports/verification_summary.json).
+```bash
+python verify.py
+```
 
-У четырёх дополнительных кандидатов наблюдаются численные различия между платформами.
-Все отличия фиксируются в таблице сравнения; выбранный RF воспроизводится с rtol=1e-12, atol=1e-9.
-Флаг --strict-all-candidates дополнительно требует совпадения всех кандидатов.
+Проверка использует включённые групповые разбиения `validation/`, сохранённые OOF и веса. Она проверяет сохранность валидационных целей, разделение групп, арифметику ансамблей, пересчёт метрик и загрузку моделей в новых процессах. Добавление CC50/IC50 и других посторонних столбцов в test не должно менять предсказания. Итог сохраняется в `reports/verification.json`; временные CSV — в `.verification/`.
 
-## Streamlit
+## Повторение исследовательского обучения
 
-Один SMILES или CSV → сохранённая модель → прогноз, структура, сортировка, распределение и экспорт.
-Полный экспорт сохраняет исходный порядок строк. Для полного официального test доступен отдельный
-CSV ровно с колонками index,SI VACV в порядке sample_submit.csv.
+В поставке сохранён полный код и журнал экспериментов v8. Для воспроизведения используйте копию папки: команды перезаписывают модели и отчёты.
 
-Tanimoto описывает химическое сходство с train, а не вероятность или доверительный интервал.
-Прогноз SI не подтверждает эффективность или клиническую безопасность.
+```bash
+python pipeline.py primary --cache .cache --workers 4
+python pipeline.py confirm --cache .cache --workers 6
+python verify.py --cache .cache --work .verification
+```
 
-## Внешние источники
+Первый этап сравнивает 20 конфигураций и два seed-ансамбля; второй проверяет кандидатов и переобучает новые финальные компоненты. Полный checkpoint исходной модели 833 000 переиспользуется из `reference/`, как в оригинальном эксперименте. Данный сценарий рассчитан на включённый train, а не на произвольную новую обучающую выборку. При недостатке ресурсов уменьшите число workers. Переобучение не нужно для получения готового submission.
 
-Сборщик ChEMBL и HTTP snapshots содержат 6148 измерений, 135 публикаций и 532 assay.
-Это не 6148 меток SI. CC50/EC50 не подменяется CC50/IC50, цензурированные границы не считаются точными значениями.
-Пять сопоставленных пар из одной статьи пересекаются с train/test и не добавлены в обучение.
-Их независимое ручное подтверждение остаётся незавершённым.
+В этой поставке результат `confirm` закреплён за смесью 75/25. Локальный победитель по CV записывается отдельно в `selected_by_train_cv`: раньше им был binary3. Выбор 75/25 для выдачи сделан по запросу пользователя после его оценки Kaggle 830 000, а не объявлен новым победителем локальной валидации. Score относится к исходному включённому CSV и не является гарантией для изменённых данных или модели.
 
-Базовая модель обучена только на исходном train. Новое расширение данных и ансамбль отложены.
-Существующий сборщик доступен через `python scripts/run.py collect`; при наличии кэша — `collect --offline`.
+## Файлы и происхождение
 
-## Документация
+- `models/reference_833000/` и `models/l2_50/`: два рабочих checkpoint `.cbm` и предобработка `.joblib`.
+- `models/config.json`: выбранная смесь и веса 0.75/0.25.
+- `reference/config.json`: фиксированный список дескрипторов.
+- `data/train_v2.csv`: неизменённый исходный train; `data/test.csv` содержит только index и SMILES.
+- `REPORT.md`: краткий отчёт по этой поставке.
+- `REPORT_V8.md`, остальные модели, CSV и таблицы: сохранённая история сравнения v8; рекомендации старого отчёта относятся к тому этапу.
+- `reports/delivery_provenance.json`: контрольные суммы исходного CSV, весов и предобработки.
+- `reports/verification.json` и `reports/package_verification.json`: проверки текущей поставки. Отчёты прежней поставки имеют префикс `v8_`.
+- `SHA256SUMS`: контрольные суммы файлов архива.
 
-- [Требования и ограничения](docs/requirements.md)
-- [Запуск из нового клона](docs/clean_clone.md)
-- [Проверка на Windows](docs/windows_runbook.md)
-- [Статус курации](docs/curation_note.md)
-- [План проекта](docs/implementation_plan.md)
-- [Структура защиты](presentation/defense_outline.md)
-- [Локальный комплект для сдачи](docs/final_submission.md)
-- [Краткий запуск демо](docs/demo_quickstart.md)
-
-Публикуемый состав исходников задан в publication_files.txt. Исходные данные, модели и контрольный
-пакет сохраняются отдельно; секреты и приватные документы в репозиторий не входят.
+Оба рабочих компонента обучены только на локальных данных. Внешние данные включены как материал исследовательского этапа; сетевого загрузчика в этой поставке нет. Для инференса не требуются сеть или обращения к ChEMBL/PubChem. Ранее подготовленные внешние данные сохраняют свою атрибуцию и лицензию в `data/external/ATTRIBUTION.md`.
