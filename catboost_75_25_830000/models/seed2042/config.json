@@ -1,0 +1,17 @@
+{
+  "spec": {
+    "name": "seed2042",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "seed",
+    "params": {
+      "random_seed": 2042
+    }
+  },
+  "fit_rows": 230,
+  "local_unique_rows": 230,
+  "features": 4313,
+  "auxiliary_normalizer": null
+}

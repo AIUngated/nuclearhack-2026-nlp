@@ -1,0 +1,237 @@
+{
+  "cases": [
+    {
+      "name": "reference_833000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model"
+    },
+    {
+      "name": "seed202",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "seed",
+      "params": {
+        "random_seed": 202
+      }
+    },
+    {
+      "name": "seed2042",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "seed",
+      "params": {
+        "random_seed": 2042
+      }
+    },
+    {
+      "name": "ordered",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "boosting_type": "Ordered"
+      }
+    },
+    {
+      "name": "depthwise",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "grow_policy": "Depthwise",
+        "min_data_in_leaf": 8,
+        "depth": 6
+      }
+    },
+    {
+      "name": "lossguide",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "grow_policy": "Lossguide",
+        "max_leaves": 16,
+        "min_data_in_leaf": 8,
+        "depth": 6
+      }
+    },
+    {
+      "name": "l2_50",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "l2_leaf_reg": 50
+      }
+    },
+    {
+      "name": "iterations600",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "iterations": 600
+      }
+    },
+    {
+      "name": "iterations1500",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "iterations": 1500,
+        "learning_rate": 0.02
+      }
+    },
+    {
+      "name": "tweedie125",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.25,
+      "category": "model"
+    },
+    {
+      "name": "tweedie150",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.5,
+      "category": "model"
+    },
+    {
+      "name": "binary3",
+      "kind": "scalar",
+      "feature": "binary3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features"
+    },
+    {
+      "name": "descriptor_corr",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features",
+      "correlation": 0.98
+    },
+    {
+      "name": "density3",
+      "kind": "scalar",
+      "feature": "density3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features"
+    },
+    {
+      "name": "multitask03",
+      "kind": "multi",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "multitask",
+      "aux_weight": 0.3
+    },
+    {
+      "name": "multitask10",
+      "kind": "multi",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "multitask",
+      "aux_weight": 1.0
+    },
+    {
+      "name": "external010",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "external",
+      "external_weight": 0.1
+    },
+    {
+      "name": "cap15000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 15000.0,
+      "power": 1.35,
+      "category": "target"
+    },
+    {
+      "name": "cap25000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 25000.0,
+      "power": 1.35,
+      "category": "target"
+    },
+    {
+      "name": "smooth20000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "target",
+      "smooth": true
+    }
+  ],
+  "derived_ensembles": {
+    "seed_mean": [
+      "reference_833000",
+      "seed202",
+      "seed2042"
+    ],
+    "seed_median": [
+      "reference_833000",
+      "seed202",
+      "seed2042"
+    ]
+  },
+  "primary": "canonical2042",
+  "confirmation": [
+    "scaffold2042",
+    "canonical42",
+    "scaffold42"
+  ],
+  "reference_kaggle_mse_reported_by_user": 833000,
+  "new_kaggle_scores": null,
+  "source_sha256": "d9a876a67b5623d9cdb6592fc53d31ffaa7c535b09968c3a538138740fe246e8",
+  "external_sha256": "2701bda617bfdb690ad6f65850209d9eb717067b3b8cccfacd0563691e47d2ed",
+  "source_files_sha256": {
+    "pipeline.py": "2169e040bacc81c78f31b1acc3c017535261fb972f21a2a2e4531e7e7cac621f",
+    "core.py": "c1b2e7b13195a254e70a6327d0bbae90bd0f4ea60b7e34f86e8a7775e0539111",
+    "features.py": "668d432425c08164546f8b7b2acd091c4477d4846c31b2785e2c8e0dc999fea5",
+    "preprocess.py": "963ecec5cd930773a1fdf1d4d1373c0a7d945286bc1695b3988b935e022d07bb"
+  },
+  "test_features": [
+    "SMILES"
+  ],
+  "output_policy": "same as confirmed 833000: positive floor0.01, no arbitrary output ceiling",
+  "validation_truth": "all 237 original complete measured targets; no filtering, clipping or weighting of held-out labels",
+  "external_policy": "exclude every raw train and test neutral achiral canonical-tautomer identity; also purge held-out local scaffolds in scaffold CV",
+  "auxiliary_targets": "CC50/IC50 from TRAIN only; train-fold mean/std; no test concentrations or missingness are inputs",
+  "shortlist": "primary only: two best non-seed candidates under robustness bounds, best ensemble, best diverse candidate; at most four",
+  "selection": "mean relative raw MSE over four splits; mean low MSE<1; mean ordinary<=1.02; worst full<=1.02; worst low<=1.10",
+  "validation_limit": "all these partitions are tuning CV on the same molecules, not an independent final test"
+}

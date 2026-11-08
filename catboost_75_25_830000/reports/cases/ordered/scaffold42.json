@@ -1,0 +1,22 @@
+{
+  "name": "ordered",
+  "split": "scaffold42",
+  "spec": {
+    "name": "ordered",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "boosting_type": "Ordered"
+    }
+  },
+  "fingerprint": "6c20f93204f378a4f726d5c52810cea300b97102fcaafb99f77fb7001d58b55d",
+  "seconds": 451.46875497300016,
+  "mse": 5767047.964389787,
+  "mae": 297.09452661553684,
+  "mse_low": 300328.4759186684,
+  "mse_ordinary": 25440.608214094384,
+  "mse_tail": 10837696.737927338
+}

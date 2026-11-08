@@ -1,0 +1,15 @@
+{
+  "name": "seed_median",
+  "split": "scaffold42",
+  "seconds": 0.0,
+  "shared_fit": [
+    "reference_833000",
+    "seed202",
+    "seed2042"
+  ],
+  "mse": 5757214.997792809,
+  "mae": 295.5070412902858,
+  "mse_low": 293622.5075856478,
+  "mse_ordinary": 23189.63446929577,
+  "mse_tail": 10660215.97704581
+}

@@ -1,0 +1,19 @@
+{
+  "name": "binary3",
+  "split": "canonical2042",
+  "spec": {
+    "name": "binary3",
+    "kind": "scalar",
+    "feature": "binary3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "features"
+  },
+  "fingerprint": "aa15fdf772d28ee05b0efd04a9641052c22e25a6587e9494698ac7b0b6edd979",
+  "seconds": 48.37568166999972,
+  "mse": 5725137.549567251,
+  "mae": 294.6327006448229,
+  "mse_low": 263085.48055839544,
+  "mse_ordinary": 27929.54041857917,
+  "mse_tail": 9277396.519251354
+}

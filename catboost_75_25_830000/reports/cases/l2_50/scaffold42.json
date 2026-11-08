@@ -1,0 +1,22 @@
+{
+  "name": "l2_50",
+  "split": "scaffold42",
+  "spec": {
+    "name": "l2_50",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "l2_leaf_reg": 50
+    }
+  },
+  "fingerprint": "0667da94441509d18d915b0284da592094c86956e030678b81637f069998acba",
+  "seconds": 52.50002405499981,
+  "mse": 5751675.687068923,
+  "mae": 310.67932381899425,
+  "mse_low": 289582.90152665606,
+  "mse_ordinary": 23868.1185119353,
+  "mse_tail": 10475316.250424283
+}

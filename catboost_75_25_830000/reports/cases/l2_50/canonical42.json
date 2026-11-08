@@ -1,0 +1,22 @@
+{
+  "name": "l2_50",
+  "split": "canonical42",
+  "spec": {
+    "name": "l2_50",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "l2_leaf_reg": 50
+    }
+  },
+  "fingerprint": "4e8e869402c4f68fdaeaf6a6949d25eae761fba26a74619bb25384e86b66f973",
+  "seconds": 55.135976364999806,
+  "mse": 5733219.165343844,
+  "mae": 322.0657417836313,
+  "mse_low": 270405.2004224651,
+  "mse_ordinary": 37153.01222469243,
+  "mse_tail": 9211739.081337083
+}

@@ -1,0 +1,19 @@
+{
+  "name": "reference_833000",
+  "split": "scaffold42",
+  "spec": {
+    "name": "reference_833000",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model"
+  },
+  "fingerprint": "78d958175062d972127181619a6853cce67ed7f7b14707b78375df9c49f7953b",
+  "seconds": 103.40407973499987,
+  "mse": 5756553.543981557,
+  "mae": 294.21866062868816,
+  "mse_low": 292958.25100400945,
+  "mse_ordinary": 22370.996673264064,
+  "mse_tail": 10665469.667015912
+}

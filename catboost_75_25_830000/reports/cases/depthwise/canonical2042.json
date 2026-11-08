@@ -1,0 +1,24 @@
+{
+  "name": "depthwise",
+  "split": "canonical2042",
+  "spec": {
+    "name": "depthwise",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "grow_policy": "Depthwise",
+      "min_data_in_leaf": 8,
+      "depth": 6
+    }
+  },
+  "fingerprint": "e2a9f94e94c4686fd37b6f1dfa38170a276ab31d2847c4d741357b1b1596ba12",
+  "seconds": 50.52863263900008,
+  "mse": 5743591.7828611,
+  "mae": 289.59273650806665,
+  "mse_low": 278257.7084518897,
+  "mse_ordinary": 26818.418933691344,
+  "mse_tail": 9916763.806649491
+}

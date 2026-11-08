@@ -1,0 +1,22 @@
+{
+  "name": "seed2042",
+  "split": "scaffold2042",
+  "spec": {
+    "name": "seed2042",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "seed",
+    "params": {
+      "random_seed": 2042
+    }
+  },
+  "fingerprint": "d5d063d8870ce4d8c19a487431749d3398ddc3d871974bac83eeb0da4e39c648",
+  "seconds": 97.55992162200027,
+  "mse": 5770107.165984019,
+  "mae": 300.4543977968587,
+  "mse_low": 302334.1346518236,
+  "mse_ordinary": 27080.214041596053,
+  "mse_tail": 10853734.424710548
+}

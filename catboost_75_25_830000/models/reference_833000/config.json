@@ -1,0 +1,10 @@
+{
+  "spec": {
+    "name": "reference_833000",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model"
+  }
+}

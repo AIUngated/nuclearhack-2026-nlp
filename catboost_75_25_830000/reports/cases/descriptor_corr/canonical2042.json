@@ -1,0 +1,20 @@
+{
+  "name": "descriptor_corr",
+  "split": "canonical2042",
+  "spec": {
+    "name": "descriptor_corr",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "features",
+    "correlation": 0.98
+  },
+  "fingerprint": "4e2a34666138a24a17b1df30fec5992a375f17f4816df78ad7a39c173ef5c1fa",
+  "seconds": 45.311251696,
+  "mse": 5723307.499163555,
+  "mae": 293.77631056342994,
+  "mse_low": 260648.94429885063,
+  "mse_ordinary": 28687.818551157678,
+  "mse_tail": 9152492.097960414
+}

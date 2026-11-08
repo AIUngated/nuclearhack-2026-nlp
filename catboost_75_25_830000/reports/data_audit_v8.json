@@ -1,0 +1,25 @@
+{
+  "source_rows": 320,
+  "excluded_incomplete_or_nonpositive": 83,
+  "complete_measurements": 237,
+  "unique_canonical": 230,
+  "duplicate_measurements": 7,
+  "invalid_smiles_in_retained": 0,
+  "si_quantiles": {
+    "0": 0.094375,
+    "0.25": 1.0,
+    "0.5": 5.946026986506746,
+    "0.75": 48.598130841121495,
+    "0.9": 200.0,
+    "0.95": 731.4285714285704,
+    "0.99": 4099.999999999965,
+    "1": 36066.66666666667
+  },
+  "counts": {
+    "below_1": 25,
+    "1000_or_above": 7,
+    "10000_or_above": 1
+  },
+  "duplicate_groups_disagreeing_more_than_10x": 2,
+  "baseline_extreme_share_of_squared_error_mean": 0.9512768677861957
+}

@@ -1,0 +1,20 @@
+{
+  "name": "smooth20000",
+  "split": "canonical2042",
+  "spec": {
+    "name": "smooth20000",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "target",
+    "smooth": true
+  },
+  "fingerprint": "e5ee64bf87b84a39946f0db317b4171b274ac81735aafe59187c75292ae9b35f",
+  "seconds": 39.857758615999956,
+  "mse": 5728710.085646695,
+  "mae": 296.07749169093853,
+  "mse_low": 265532.862049948,
+  "mse_ordinary": 28618.45312227845,
+  "mse_tail": 9347251.870943949
+}

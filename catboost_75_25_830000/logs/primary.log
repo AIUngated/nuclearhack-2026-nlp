@@ -1,0 +1,27 @@
+Canonicalizing test:   0%|          | 0/597 [00:00<?, ?it/s]Canonicalizing test:   4%|▎         | 22/597 [00:00<00:02, 218.49it/s]Canonicalizing test:   8%|▊         | 48/597 [00:00<00:02, 240.74it/s]Canonicalizing test:  13%|█▎        | 75/597 [00:00<00:02, 253.05it/s]Canonicalizing test:  17%|█▋        | 101/597 [00:00<00:01, 252.48it/s]Canonicalizing test:  21%|██▏       | 128/597 [00:00<00:01, 255.88it/s]Canonicalizing test:  26%|██▋       | 157/597 [00:00<00:01, 265.15it/s]Canonicalizing test:  31%|███       | 184/597 [00:00<00:01, 262.20it/s]Canonicalizing test:  35%|███▌      | 211/597 [00:00<00:01, 262.22it/s]Canonicalizing test:  40%|███▉      | 238/597 [00:00<00:01, 256.90it/s]Canonicalizing test:  44%|████▍     | 264/597 [00:01<00:01, 255.16it/s]Canonicalizing test:  49%|████▊     | 290/597 [00:01<00:01, 255.06it/s]Canonicalizing test:  53%|█████▎    | 318/597 [00:01<00:01, 259.74it/s]Canonicalizing test:  58%|█████▊    | 345/597 [00:01<00:00, 262.61it/s]Canonicalizing test:  62%|██████▏   | 372/597 [00:01<00:00, 261.48it/s]Canonicalizing test:  67%|██████▋   | 399/597 [00:01<00:00, 261.45it/s]Canonicalizing test:  71%|███████▏  | 426/597 [00:01<00:00, 250.88it/s]Canonicalizing test:  76%|███████▌  | 453/597 [00:01<00:00, 256.30it/s]Canonicalizing test:  80%|████████  | 480/597 [00:01<00:00, 258.71it/s]Canonicalizing test:  85%|████████▍ | 506/597 [00:01<00:00, 257.49it/s]Canonicalizing test:  89%|████████▉ | 532/597 [00:02<00:00, 252.98it/s]Canonicalizing test:  94%|█████████▎| 559/597 [00:02<00:00, 253.76it/s]Canonicalizing test:  98%|█████████▊| 586/597 [00:02<00:00, 256.77it/s]Canonicalizing test: 100%|██████████| 597/597 [00:02<00:00, 256.44it/s]
+[07:29:29] Can't kekulize mol.  Unkekulized atoms: 22
+[07:29:29] Can't kekulize mol.  Unkekulized atoms: 22 25 26
+[07:29:29] Can't kekulize mol.  Unkekulized atoms: 22 23 25
+[07:29:31] Tautomer enumeration stopped at 238 tautomers: max transforms reached
+[07:29:33] Tautomer enumeration stopped at 716 tautomers: max transforms reached
+[07:29:33] Tautomer enumeration stopped at 1000 tautomers: max tautomers reached
+DONE canonical2042 seed202 5732885.86 269437.08 47.5
+DONE canonical2042 seed2042 5726570.91 264674.6 47.6
+DONE canonical2042 reference_833000 5729484.59 268600.0 47.6
+DONE canonical2042 l2_50 5712799.2 253139.78 45.7
+DONE canonical2042 depthwise 5743591.78 278257.71 50.5
+DONE canonical2042 lossguide 5746747.51 278829.68 71.8
+DONE canonical2042 iterations600 5728515.24 265035.78 29.2
+DONE canonical2042 tweedie125 5730921.89 265188.19 49.3
+DONE canonical2042 tweedie150 5723743.12 268454.1 48.8
+DONE canonical2042 iterations1500 5730055.67 266843.53 73.5
+DONE canonical2042 descriptor_corr 5723307.5 260648.94 45.3
+DONE canonical2042 binary3 5725137.55 263085.48 48.4
+DONE canonical2042 ordered 5707005.9 238311.54 234.3
+DONE canonical2042 density3 5738482.03 268912.35 63.8
+DONE canonical2042 cap15000 5731137.04 270259.45 44.7
+DONE canonical2042 external010 5737634.91 271343.37 51.3
+DONE canonical2042 multitask03 5822910.11 403912.82 102.9
+DONE canonical2042 multitask10 5794271.01 391874.97 103.0
+DONE canonical2042 cap25000 5724651.1 263746.03 42.9
+DONE canonical2042 smooth20000 5728710.09 265532.86 39.9

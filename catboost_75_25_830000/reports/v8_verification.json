@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "unchanged_validation_measurements": 237,
+  "group_checks": 20,
+  "external_identity_overlaps": 0,
+  "strict_ic50_external_structures": 16,
+  "external_scaffold_checks": 10,
+  "independent_metric_checks": 208,
+  "reference_833000_delta": 0.0,
+  "csvs_checked": [
+    "submission_ordered.csv",
+    "submission_seed_mean.csv",
+    "submission_l2_50_blend25.csv",
+    "submission.csv",
+    "submission_ordered_blend25.csv",
+    "submission_seed_mean_blend25.csv",
+    "submission_binary3_blend25.csv",
+    "submission_ordered_blend50.csv",
+    "submission_binary3.csv",
+    "submission_seed_mean_blend50.csv",
+    "submission_reference_833000.csv",
+    "submission_l2_50.csv",
+    "submission_l2_50_blend50.csv",
+    "submission_binary3_blend50.csv"
+  ],
+  "reloads": [
+    {
+      "model": "binary3",
+      "fresh_process": true,
+      "max_delta": 0.0,
+      "seconds": 5.761820172000171
+    },
+    {
+      "model": "reference_833000",
+      "fresh_process": true,
+      "max_delta": 0.0,
+      "seconds": 5.749753354999939
+    },
+    {
+      "model": "seed_mean",
+      "fresh_process": true,
+      "max_delta": 0.0,
+      "seconds": 5.778941697999926
+    },
+    {
+      "model": "ordered",
+      "fresh_process": true,
+      "max_delta": 0.0,
+      "seconds": 6.218863485999918
+    }
+  ],
+  "native_model_checks": [
+    {
+      "name": "binary3",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Plain",
+      "random_seed": 42,
+      "features": 4313
+    },
+    {
+      "name": "l2_50",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Plain",
+      "random_seed": 42,
+      "features": 4313
+    },
+    {
+      "name": "ordered",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Ordered",
+      "random_seed": 42,
+      "features": 4313
+    },
+    {
+      "name": "reference_833000",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Plain",
+      "random_seed": 42,
+      "features": 4313
+    },
+    {
+      "name": "seed202",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Plain",
+      "random_seed": 202,
+      "features": 4313
+    },
+    {
+      "name": "seed2042",
+      "loss": "Tweedie:variance_power=1.35",
+      "boosting_type": "Plain",
+      "random_seed": 2042,
+      "features": 4313
+    }
+  ],
+  "forbidden_columns_prediction_delta": 0.0,
+  "test_input_columns": [
+    "index",
+    "SMILES"
+  ],
+  "new_kaggle_scores": null
+}

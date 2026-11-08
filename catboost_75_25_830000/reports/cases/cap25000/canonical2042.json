@@ -1,0 +1,19 @@
+{
+  "name": "cap25000",
+  "split": "canonical2042",
+  "spec": {
+    "name": "cap25000",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 25000.0,
+    "power": 1.35,
+    "category": "target"
+  },
+  "fingerprint": "ab3e74f08d00b19b4376756617c5068bb22569da43625ae5a18b00b647661697",
+  "seconds": 42.92774668099992,
+  "mse": 5724651.097225971,
+  "mae": 295.4395063957402,
+  "mse_low": 263746.03043192084,
+  "mse_ordinary": 28508.842639420436,
+  "mse_tail": 9281171.56247777
+}

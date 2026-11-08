@@ -1,0 +1,6 @@
+{
+  "rows": 64,
+  "identity_overlaps": 0,
+  "blocked_train_and_test_identities": 812,
+  "scaffold_field": "same core.canonical_record as local data"
+}
