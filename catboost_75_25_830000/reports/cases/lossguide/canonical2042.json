@@ -1,0 +1,25 @@
+{
+  "name": "lossguide",
+  "split": "canonical2042",
+  "spec": {
+    "name": "lossguide",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "grow_policy": "Lossguide",
+      "max_leaves": 16,
+      "min_data_in_leaf": 8,
+      "depth": 6
+    }
+  },
+  "fingerprint": "82e15d3544c67755a4ff893348e2fab348114fe2dc715a58ab3234bcf7cc066b",
+  "seconds": 71.77024810700004,
+  "mse": 5746747.514310057,
+  "mae": 289.77157539750004,
+  "mse_low": 278829.67923313304,
+  "mse_ordinary": 26843.493688728377,
+  "mse_tail": 9938300.125101978
+}

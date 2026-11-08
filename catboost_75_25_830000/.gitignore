@@ -1,0 +1,10 @@
+﻿__pycache__/
+.venv/
+.cache/
+.verification/
+.env
+.env.*
+kaggle.json
+data/*.csv
+!models/**/preprocessor.joblib
+!reference/imputer.joblib

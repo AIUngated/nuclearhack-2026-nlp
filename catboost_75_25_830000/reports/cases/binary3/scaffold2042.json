@@ -1,0 +1,19 @@
+{
+  "name": "binary3",
+  "split": "scaffold2042",
+  "spec": {
+    "name": "binary3",
+    "kind": "scalar",
+    "feature": "binary3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "features"
+  },
+  "fingerprint": "ef32f85ce12b6bcf5b8509bc8377cb4553fb16f08a573b4bb2558064d14f86e1",
+  "seconds": 95.43725541699996,
+  "mse": 5768026.219960666,
+  "mae": 298.71472140144584,
+  "mse_low": 301849.3411970597,
+  "mse_ordinary": 26516.755455502673,
+  "mse_tail": 10856265.127956746
+}

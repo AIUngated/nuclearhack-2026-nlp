@@ -1,0 +1,22 @@
+{
+  "name": "seed202",
+  "split": "canonical2042",
+  "spec": {
+    "name": "seed202",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "seed",
+    "params": {
+      "random_seed": 202
+    }
+  },
+  "fingerprint": "237116d15a33a5e6e6540542d2d046c6ba9d278baec601795c1fb937e0fd6296",
+  "seconds": 47.53085966699996,
+  "mse": 5732885.860780778,
+  "mae": 297.61725305313064,
+  "mse_low": 269437.0787787038,
+  "mse_ordinary": 30256.796665998914,
+  "mse_tail": 9438014.559765724
+}

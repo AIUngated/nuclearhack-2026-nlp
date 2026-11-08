@@ -1,0 +1,22 @@
+{
+  "name": "ordered",
+  "split": "canonical42",
+  "spec": {
+    "name": "ordered",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "boosting_type": "Ordered"
+    }
+  },
+  "fingerprint": "08862237f1f3b485e4b96f5c2fd7630622c19b020811efe869527e9a81492748",
+  "seconds": 432.184390722,
+  "mse": 5762714.421448713,
+  "mae": 323.91889587474583,
+  "mse_low": 290349.2052699852,
+  "mse_ordinary": 58269.074500742565,
+  "mse_tail": 9186754.21809095
+}

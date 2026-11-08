@@ -1,0 +1,19 @@
+{
+  "name": "density3",
+  "split": "canonical2042",
+  "spec": {
+    "name": "density3",
+    "kind": "scalar",
+    "feature": "density3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "features"
+  },
+  "fingerprint": "265d717ec63aa3eb8f7876ca73edb2044902a1cb777a8d53d93be410260f3510",
+  "seconds": 63.80468440899995,
+  "mse": 5738482.026459012,
+  "mae": 298.9978836615122,
+  "mse_low": 268912.3490441158,
+  "mse_ordinary": 30371.12828577302,
+  "mse_tail": 9412992.478113921
+}

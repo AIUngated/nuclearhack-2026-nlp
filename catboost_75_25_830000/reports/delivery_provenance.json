@@ -1,0 +1,41 @@
+{
+  "source_project": "catboost_refinement_v8",
+  "source_submission": "submission_l2_50_blend25.csv",
+  "source_csv_sha256": "02f1529c34196a05723e6dc423a46d8376d1ccad77f50f6a64c5b5bfafafe252",
+  "delivered_csv_sha256": "02f1529c34196a05723e6dc423a46d8376d1ccad77f50f6a64c5b5bfafafe252",
+  "reported_kaggle_mse_user": 830000,
+  "kaggle_score_measured_locally": false,
+  "selected": "l2_50_blend25",
+  "weights": [
+    0.75,
+    0.25
+  ],
+  "members": [
+    "reference_833000",
+    "l2_50"
+  ],
+  "model_and_preprocessor_sha256": {
+    "models/binary3/preprocessor.joblib": "96d97206678cd524348d66a5596bc4840cb0c9ff6d8bd1b1b1d680ff2d4a2905",
+    "models/binary3/model.cbm": "15966f7bc1ed1ff15e0fb7a853c23b8bdf1852d3cd52d418c89960f157c3f81e",
+    "models/seed2042/preprocessor.joblib": "756ebb28cab637612947fad8d6ca98b9cde3ac37c648dea8b4c84c7760d91c35",
+    "models/seed2042/model.cbm": "a94506fca14bf44be59ec2c2096ab29dde6f7eec2a6dbdb94c774c26ba54b1c1",
+    "models/reference_833000/preprocessor.joblib": "756ebb28cab637612947fad8d6ca98b9cde3ac37c648dea8b4c84c7760d91c35",
+    "models/reference_833000/model.cbm": "ac8985313e5dd8ecfeffd70cfc33b191be259e94af4ceafe9eb98143f4d53332",
+    "models/seed202/preprocessor.joblib": "756ebb28cab637612947fad8d6ca98b9cde3ac37c648dea8b4c84c7760d91c35",
+    "models/seed202/model.cbm": "feedcc4d532e7634d05e69e722f949e00ac648402382051398a011b56a955da2",
+    "models/ordered/preprocessor.joblib": "756ebb28cab637612947fad8d6ca98b9cde3ac37c648dea8b4c84c7760d91c35",
+    "models/ordered/model.cbm": "319db4036f0e1d03ce8b3eb4bafcbae81b32fb059ba767eb189fc4de29aa6322",
+    "models/l2_50/preprocessor.joblib": "756ebb28cab637612947fad8d6ca98b9cde3ac37c648dea8b4c84c7760d91c35",
+    "models/l2_50/model.cbm": "490a655faa6d45988e31bc5d44eef5662af0b890df4823904af4e3bb714b2da0"
+  },
+  "weights_unchanged_from_v8": true,
+  "inference_features": [
+    "SMILES"
+  ],
+  "package_changes": [
+    "default ensemble pinned to 75/25",
+    "submission.csv replaced by exact original 75/25 CSV",
+    "offline verification fold files included",
+    "delivery documentation updated"
+  ]
+}

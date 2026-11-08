@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "zip_crc": "passed",
+  "sha256_manifest": "passed",
+  "isolated_extraction_inference": [
+    {
+      "model": "selected",
+      "rows": 597,
+      "max_delta": 0.0,
+      "seconds": 10.946314872000585
+    },
+    {
+      "model": "binary3_blend50",
+      "rows": 597,
+      "max_delta": 0.0,
+      "seconds": 5.891927387000578
+    },
+    {
+      "model": "l2_50_blend25",
+      "rows": 597,
+      "max_delta": 0.0,
+      "seconds": 5.824929721999979
+    }
+  ]
+}

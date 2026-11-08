@@ -1,0 +1,357 @@
+{
+  "selected": "l2_50_blend25",
+  "formulas": {
+    "reference_833000": {
+      "members": [
+        "reference_833000"
+      ],
+      "weights": [
+        1.0
+      ],
+      "reducer": "mean"
+    },
+    "ordered": {
+      "members": [
+        "ordered"
+      ],
+      "weights": [
+        1.0
+      ],
+      "reducer": "mean"
+    },
+    "ordered_blend25": {
+      "members": [
+        "reference_833000",
+        "ordered"
+      ],
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "reducer": "mean"
+    },
+    "ordered_blend50": {
+      "members": [
+        "reference_833000",
+        "ordered"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "reducer": "mean"
+    },
+    "l2_50": {
+      "members": [
+        "l2_50"
+      ],
+      "weights": [
+        1.0
+      ],
+      "reducer": "mean"
+    },
+    "l2_50_blend25": {
+      "members": [
+        "reference_833000",
+        "l2_50"
+      ],
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "reducer": "mean"
+    },
+    "l2_50_blend50": {
+      "members": [
+        "reference_833000",
+        "l2_50"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "reducer": "mean"
+    },
+    "seed_mean": {
+      "members": [
+        "reference_833000",
+        "seed202",
+        "seed2042"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "reducer": "mean"
+    },
+    "seed_mean_blend25": {
+      "members": [
+        "reference_833000",
+        "seed_mean"
+      ],
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "reducer": "mean"
+    },
+    "seed_mean_blend50": {
+      "members": [
+        "reference_833000",
+        "seed_mean"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "reducer": "mean"
+    },
+    "binary3": {
+      "members": [
+        "binary3"
+      ],
+      "weights": [
+        1.0
+      ],
+      "reducer": "mean"
+    },
+    "binary3_blend25": {
+      "members": [
+        "reference_833000",
+        "binary3"
+      ],
+      "weights": [
+        0.75,
+        0.25
+      ],
+      "reducer": "mean"
+    },
+    "binary3_blend50": {
+      "members": [
+        "reference_833000",
+        "binary3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "reducer": "mean"
+    }
+  },
+  "components": [
+    "binary3",
+    "l2_50",
+    "ordered",
+    "reference_833000",
+    "seed202",
+    "seed2042"
+  ],
+  "source_specs": {
+    "reference_833000": {
+      "name": "reference_833000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model"
+    },
+    "seed202": {
+      "name": "seed202",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "seed",
+      "params": {
+        "random_seed": 202
+      }
+    },
+    "seed2042": {
+      "name": "seed2042",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "seed",
+      "params": {
+        "random_seed": 2042
+      }
+    },
+    "ordered": {
+      "name": "ordered",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "boosting_type": "Ordered"
+      }
+    },
+    "depthwise": {
+      "name": "depthwise",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "grow_policy": "Depthwise",
+        "min_data_in_leaf": 8,
+        "depth": 6
+      }
+    },
+    "lossguide": {
+      "name": "lossguide",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "grow_policy": "Lossguide",
+        "max_leaves": 16,
+        "min_data_in_leaf": 8,
+        "depth": 6
+      }
+    },
+    "l2_50": {
+      "name": "l2_50",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "l2_leaf_reg": 50
+      }
+    },
+    "iterations600": {
+      "name": "iterations600",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "iterations": 600
+      }
+    },
+    "iterations1500": {
+      "name": "iterations1500",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "model",
+      "params": {
+        "iterations": 1500,
+        "learning_rate": 0.02
+      }
+    },
+    "tweedie125": {
+      "name": "tweedie125",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.25,
+      "category": "model"
+    },
+    "tweedie150": {
+      "name": "tweedie150",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.5,
+      "category": "model"
+    },
+    "binary3": {
+      "name": "binary3",
+      "kind": "scalar",
+      "feature": "binary3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features"
+    },
+    "descriptor_corr": {
+      "name": "descriptor_corr",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features",
+      "correlation": 0.98
+    },
+    "density3": {
+      "name": "density3",
+      "kind": "scalar",
+      "feature": "density3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "features"
+    },
+    "multitask03": {
+      "name": "multitask03",
+      "kind": "multi",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "multitask",
+      "aux_weight": 0.3
+    },
+    "multitask10": {
+      "name": "multitask10",
+      "kind": "multi",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "multitask",
+      "aux_weight": 1.0
+    },
+    "external010": {
+      "name": "external010",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "external",
+      "external_weight": 0.1
+    },
+    "cap15000": {
+      "name": "cap15000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 15000.0,
+      "power": 1.35,
+      "category": "target"
+    },
+    "cap25000": {
+      "name": "cap25000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 25000.0,
+      "power": 1.35,
+      "category": "target"
+    },
+    "smooth20000": {
+      "name": "smooth20000",
+      "kind": "scalar",
+      "feature": "count3",
+      "cap": 20000.0,
+      "power": 1.35,
+      "category": "target",
+      "smooth": true
+    }
+  },
+  "reference_kaggle_mse_reported_by_user": 833000,
+  "new_kaggle_scores": null,
+  "test_features": [
+    "SMILES"
+  ],
+  "output_policy": "same as 833000: floor0.01, no fixed ceiling",
+  "selected_by_train_cv": "binary3",
+  "selection_basis": "User requested deployment of the fixed 75/25 ensemble after reporting Kaggle MSE 830000",
+  "reported_kaggle_mse_user": 830000,
+  "reported_score_csv_sha256": "02f1529c34196a05723e6dc423a46d8376d1ccad77f50f6a64c5b5bfafafe252"
+}

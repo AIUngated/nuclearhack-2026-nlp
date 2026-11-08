@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "source": "ChEMBL-deposited records downloaded from official PubChem",
+  "assays_selected": 968,
+  "assay_csvs_downloaded": 968,
+  "missing_aids": [],
+  "partial_snapshot": false,
+  "raw_measurements": 8455,
+  "retained_measurements": 1381,
+  "exclusion_counts": {
+    "overlap_local_structure": 1661,
+    "censored_or_missing_relation": 2827,
+    "invalid_smiles": 30,
+    "flagged_quality": 139,
+    "incompatible_endpoint": 2102,
+    "unsupported_concentration_unit": 239,
+    "unsupported_schema_assays": 244,
+    "missing_nonpositive_or_nonfinite_value": 76
+  },
+  "tasks": {
+    "si_vacv": {
+      "molecules": 64,
+      "measurements": 68
+    },
+    "si_pox": {
+      "molecules": 64,
+      "measurements": 109
+    },
+    "vacv_ic50": {
+      "molecules": 111,
+      "measurements": 117
+    },
+    "vacv_ec50": {
+      "molecules": 267,
+      "measurements": 312
+    },
+    "cc50": {
+      "molecules": 657,
+      "measurements": 772
+    }
+  },
+  "global_decontamination": "All 320 train + all 597 test structures blocked before reading labels; FragmentParent, Uncharger, remove stereochemistry, canonical tautomer",
+  "exact_local_identity_overlaps_remaining": 0,
+  "concentration_output_unit": "uM",
+  "censored_values_used": false,
+  "pairing": "same canonical molecule, DOI, known cell and matching known duration or both unknown; direct SI preferred",
+  "license": "ChEMBL CC BY-SA 3.0; https://chembl.gitbook.io/chembl-interface-documentation/about"
+}

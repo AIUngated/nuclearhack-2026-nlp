@@ -1,0 +1,20 @@
+{
+  "name": "multitask10",
+  "split": "canonical2042",
+  "spec": {
+    "name": "multitask10",
+    "kind": "multi",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "multitask",
+    "aux_weight": 1.0
+  },
+  "fingerprint": "8041db5d77288415f46408f95559c141d8a474ac5ca346bd24ca4fe151d61318",
+  "seconds": 102.95334595900022,
+  "mse": 5794271.012132305,
+  "mae": 395.8697942442593,
+  "mse_low": 391874.9727142582,
+  "mse_ordinary": 205778.53395914836,
+  "mse_tail": 7525571.791660135
+}

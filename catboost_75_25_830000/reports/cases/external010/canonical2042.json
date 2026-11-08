@@ -1,0 +1,20 @@
+{
+  "name": "external010",
+  "split": "canonical2042",
+  "spec": {
+    "name": "external010",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "external",
+    "external_weight": 0.1
+  },
+  "fingerprint": "632dd407d44123eb025ade6d4de34b460855473394f8dee5a3f230ddf816eaee",
+  "seconds": 27.245083591000366,
+  "mse": 5732351.1846378045,
+  "mae": 298.3821953940585,
+  "mse_low": 268071.4663457771,
+  "mse_ordinary": 30147.954005806278,
+  "mse_tail": 9388472.772711324
+}

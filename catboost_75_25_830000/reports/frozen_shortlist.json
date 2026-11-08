@@ -1,0 +1,25 @@
+{
+  "names": [
+    "ordered",
+    "l2_50",
+    "seed_mean",
+    "binary3"
+  ],
+  "components": [
+    "binary3",
+    "l2_50",
+    "ordered",
+    "reference_833000",
+    "seed202",
+    "seed2042"
+  ],
+  "chosen_before_confirmation": true,
+  "screen_blends": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "screen_expanded_after_primary_before_confirmation": true,
+  "diverse_choice": "ordinary-SI MSE",
+  "created": 1794113026.4848063
+}

@@ -1,0 +1,12 @@
+DONE canonical2042 external010 5732351.18 268071.47 27.2
+{
+  "retained_measurements": 17,
+  "retained_unique_structures": 16,
+  "original_unique_structures": 64,
+  "policy": "Explicit CC50/IC50 ratios or matched-document/cell/duration CC50/IC50 pairs only; EC50 and unspecified SI excluded",
+  "created": 1794112716.3614204,
+  "before_shortlist_selection": true,
+  "source_measurements_sha256": "22ed11165c3fb4ec246f4dcf1b10836c902844d06b22dc451d71bd4e5d7fc56f",
+  "qualified_data_sha256": "9fc7cc604adb40df1458215c91d9ca264d1867c526476b2283be55675431633e",
+  "corrected_pipeline_sha256": "d4110d7c5efe3ac1a7a05c7ea827f828191d2b48cd670de7f130c471ee663c50"
+}

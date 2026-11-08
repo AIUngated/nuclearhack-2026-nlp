@@ -1,0 +1,19 @@
+{
+  "name": "reference_833000",
+  "split": "canonical42",
+  "spec": {
+    "name": "reference_833000",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model"
+  },
+  "fingerprint": "3f3678390ec49144b7c14cdf0a1cd156f7be6cedd42e42442229fa4cefc8b975",
+  "seconds": 99.719126684,
+  "mse": 5720341.389607912,
+  "mae": 292.89731099787554,
+  "mse_low": 259962.20901312455,
+  "mse_ordinary": 27690.005496809434,
+  "mse_tail": 9163730.010471871
+}

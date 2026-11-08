@@ -1,0 +1,20 @@
+{
+  "name": "multitask03",
+  "split": "canonical2042",
+  "spec": {
+    "name": "multitask03",
+    "kind": "multi",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "multitask",
+    "aux_weight": 0.3
+  },
+  "fingerprint": "36b7bff5c5616a787916fdcc25b9cc65c9495fc67d0f0bb5a3bad24379541d1d",
+  "seconds": 102.92815163599971,
+  "mse": 5822910.112201288,
+  "mae": 374.8128753690391,
+  "mse_low": 403912.8165297535,
+  "mse_ordinary": 209335.7615845726,
+  "mse_tail": 7862699.922761691
+}

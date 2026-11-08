@@ -1,0 +1,23 @@
+{
+  "name": "iterations1500",
+  "split": "canonical2042",
+  "spec": {
+    "name": "iterations1500",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "iterations": 1500,
+      "learning_rate": 0.02
+    }
+  },
+  "fingerprint": "c4e977c3a9caa68d12bc5039a9fa2c4bcbfb38f10e7c0ae65cf9571379700b6c",
+  "seconds": 73.54775653899992,
+  "mse": 5730055.671394332,
+  "mae": 297.7162164079813,
+  "mse_low": 266843.534764718,
+  "mse_ordinary": 29592.785487726287,
+  "mse_tail": 9361455.590382732
+}

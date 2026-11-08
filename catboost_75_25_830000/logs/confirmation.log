@@ -1,0 +1,34 @@
+DONE scaffold2042 binary3 5768026.22 301849.34 95.4
+DONE scaffold42 binary3 5751643.38 292346.91 97.7
+DONE canonical42 binary3 5716900.52 256813.48 99.4
+DONE scaffold2042 reference_833000 5767749.15 302815.79 98.6
+DONE canonical42 reference_833000 5720341.39 259962.21 99.7
+DONE scaffold42 reference_833000 5756553.54 292958.25 103.4
+DONE scaffold2042 seed2042 5770107.17 302334.13 97.6
+DONE canonical42 seed2042 5731527.12 266424.12 103.6
+DONE scaffold42 seed2042 5759231.24 295111.94 102.8
+DONE scaffold2042 seed202 5770780.96 302573.3 103.4
+DONE canonical42 seed202 5724386.05 261377.1 106.3
+DONE scaffold42 seed202 5753554.36 292394.9 104.5
+DONE scaffold2042 ordered 5782722.01 309720.35 418.8
+DONE canonical42 ordered 5762714.42 290349.21 432.2
+DONE scaffold42 ordered 5767047.96 300328.48 451.5
+DONE scaffold2042 l2_50 5765233.53 302191.85 62.9
+DONE canonical42 l2_50 5733219.17 270405.2 55.1
+DONE scaffold42 l2_50 5751675.69 289582.9 52.5
+Canonicalizing test:   0%|          | 0/597 [00:00<?, ?it/s]Canonicalizing test:  14%|█▎        | 82/597 [00:00<00:00, 816.11it/s]Canonicalizing test:  28%|██▊       | 168/597 [00:00<00:00, 841.55it/s]Canonicalizing test:  42%|████▏     | 253/597 [00:00<00:00, 829.32it/s]Canonicalizing test:  57%|█████▋    | 339/597 [00:00<00:00, 840.10it/s]Canonicalizing test:  71%|███████   | 424/597 [00:00<00:00, 840.23it/s]Canonicalizing test:  85%|████████▌ | 510/597 [00:00<00:00, 843.42it/s]Canonicalizing test: 100%|█████████▉| 595/597 [00:00<00:00, 831.43it/s]Canonicalizing test: 100%|██████████| 597/597 [00:00<00:00, 834.77it/s]
+SELECTED binary3 
+             name  mean_relative_mse  worst_relative_mse  mean_relative_low  worst_relative_low  mean_relative_ordinary     mean_mse  eligible
+          binary3           0.999459            1.000048           0.990520            0.997913                0.988668 5.740427e+06      True
+            l2_50           0.999514            1.002251           0.992258            1.040171                1.122942 5.740732e+06     False
+    l2_50_blend50           0.999653            1.000945           0.993924            1.016089                1.041847 5.741535e+06     False
+  binary3_blend50           0.999720            1.000018           0.995058            0.998840                0.992965 5.741925e+06      True
+    l2_50_blend25           0.999800            1.000427           0.996410            1.007045                1.016017 5.742385e+06      True
+  binary3_blend25           0.999857            1.000008           0.997478            0.999391                0.996140 5.742715e+06      True
+ reference_833000           1.000000            1.000000           1.000000            1.000000                1.000000 5.743532e+06     False
+seed_mean_blend25           1.000069            1.000214           1.000325            1.002350                1.004755 5.743929e+06     False
+seed_mean_blend50           1.000141            1.000430           1.000689            1.004755                1.009903 5.744338e+06     False
+  ordered_blend25           1.000228            1.001189           0.997495            1.014575                1.042624 5.744847e+06     False
+        seed_mean           1.000289            1.000871           1.001535            1.009733                1.021379 5.745186e+06     False
+  ordered_blend50           1.000634            1.002820           0.998831            1.038915                1.116512 5.747175e+06     False
+          ordered           1.001976            1.007407           1.013021            1.116890                1.358078 5.754873e+06     False

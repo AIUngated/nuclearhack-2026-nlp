@@ -1,0 +1,17 @@
+{
+  "spec": {
+    "name": "l2_50",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "l2_leaf_reg": 50
+    }
+  },
+  "fit_rows": 230,
+  "local_unique_rows": 230,
+  "features": 4313,
+  "auxiliary_normalizer": null
+}

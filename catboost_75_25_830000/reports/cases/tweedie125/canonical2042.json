@@ -1,0 +1,19 @@
+{
+  "name": "tweedie125",
+  "split": "canonical2042",
+  "spec": {
+    "name": "tweedie125",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.25,
+    "category": "model"
+  },
+  "fingerprint": "4e2918a614aeb8ffde1764a598bcd4b6acb20be279740640976782483a68b2fa",
+  "seconds": 49.31419830899995,
+  "mse": 5730921.886205555,
+  "mae": 300.1455547329391,
+  "mse_low": 265188.19222504477,
+  "mse_ordinary": 28668.305979645473,
+  "mse_tail": 9331783.83163202
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "default_ensemble": "l2_50_blend25",
+  "members": [
+    "reference_833000",
+    "l2_50"
+  ],
+  "weights": [
+    0.75,
+    0.25
+  ],
+  "zip_crc": "passed",
+  "sha256_manifest": "passed",
+  "isolated_fresh_process": true,
+  "rows": 597,
+  "max_prediction_delta": 0.0,
+  "seconds": 10.686062833000506,
+  "submission_byte_identical_to_original": true,
+  "reported_kaggle_mse_user": 830000,
+  "kaggle_score_measured_locally": false
+}

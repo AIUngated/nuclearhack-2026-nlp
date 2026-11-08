@@ -1,0 +1,15 @@
+{
+  "name": "seed_mean",
+  "split": "canonical42",
+  "seconds": 0.0,
+  "shared_fit": [
+    "reference_833000",
+    "seed202",
+    "seed2042"
+  ],
+  "mse": 5725323.008040595,
+  "mae": 294.7586127881046,
+  "mse_low": 262492.3988214429,
+  "mse_ordinary": 29172.860911193126,
+  "mse_tail": 9206408.018714353
+}

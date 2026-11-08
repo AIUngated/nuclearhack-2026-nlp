@@ -1,0 +1,22 @@
+{
+  "name": "iterations600",
+  "split": "canonical2042",
+  "spec": {
+    "name": "iterations600",
+    "kind": "scalar",
+    "feature": "count3",
+    "cap": 20000.0,
+    "power": 1.35,
+    "category": "model",
+    "params": {
+      "iterations": 600
+    }
+  },
+  "fingerprint": "5c3719200804356d75766ccd0ad22a6a002e395712e7cde9844b021f48652944",
+  "seconds": 29.23876348900012,
+  "mse": 5728515.244180763,
+  "mae": 307.32215994583,
+  "mse_low": 265035.7786172747,
+  "mse_ordinary": 30735.75171673657,
+  "mse_tail": 9246536.80980457
+}
